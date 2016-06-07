@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="SpotlightAPI">
+	<testsuite name="Root" id="298da828-5449-a468-c736-60bf0619675f" timestamp="2016-05-10T23:15:03.922Z" time="0.00 ms" tests="0" failures="0">
+	</testsuite>
+	<testsuite name="Auth Request (no body)" id="28021a63-fde5-9b13-0133-04766bf62884" timestamp="2016-05-10T23:15:03.923Z" time="9945.00 ms" tests="2" failures="0">
+		<testcase name="response code is 400" />
+		<testcase name="body contains authenticated" />
+	</testsuite>
+	<testsuite name="Auth Request (malformed body)" id="fc1f6753-1201-640d-a10e-f83efa7ecdd6" timestamp="2016-05-10T23:15:03.923Z" time="426.00 ms" tests="2" failures="0">
+		<testcase name="response code is 400" />
+		<testcase name="body contains authenticated" />
+	</testsuite>
+	<testsuite name="Auth Request (non-existent user) " id="260fa8ab-397d-a2ff-5e1f-71b9a83eb5b5" timestamp="2016-05-10T23:15:03.923Z" time="1500.00 ms" tests="2" failures="0">
+		<testcase name="response code is 401" />
+		<testcase name="body contains unauthorized" />
+	</testsuite>
+	<testsuite name="Auth Request" id="7bfa8755-4737-c7cf-951f-bdb1bb9bdb63" timestamp="2016-05-10T23:15:03.924Z" time="383.00 ms" tests="1" failures="0">
+		<testcase name="response code is 200" />
+	</testsuite>
+	<testsuite name="All Diagnostic Servers" id="607cdb86-8ed4-5eea-647c-ae33eff4caf3" timestamp="2016-05-10T23:15:03.924Z" time="770.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 200" />
+		<testcase name="Has Diagnostic Servers" />
+	</testsuite>
+	<testsuite name="Single Diagnostic Server" id="b3837024-7955-a211-c50b-c6a2d5e39b5e" timestamp="2016-05-10T23:15:03.924Z" time="262.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 200" />
+		<testcase name="Returned Diagnostic Server" />
+	</testsuite>
+	<testsuite name="Single Diagnostic Server (bad ds id)" id="4fa7bc0d-2e36-f47f-3f27-6188eabb111a" timestamp="2016-05-10T23:15:03.924Z" time="183.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 400" />
+		<testcase name="Correct error message" />
+	</testsuite>
+	<testsuite name="Single Diagnostic Server (non-existent ds id)" id="16213f4f-125c-354a-c084-e8517177db82" timestamp="2016-05-10T23:15:03.924Z" time="243.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 404" />
+		<testcase name="Correct error message" />
+	</testsuite>
+	<testsuite name="Create Diagnostic Server (empty body)" id="f7072430-c704-9fe8-87e7-65d158eee728" timestamp="2016-05-10T23:15:03.924Z" time="171.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 400" />
+		<testcase name="Has Correct Error" />
+	</testsuite>
+	<testsuite name="Create Diagnostic Server (bad ds id) copy" id="24a57a2c-6846-eb18-1884-afa7976e5b76" timestamp="2016-05-10T23:15:03.924Z" time="197.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 400" />
+		<testcase name="Has Correct Error" />
+	</testsuite>
+	<testsuite name="Create Diagnostic Server (bad ds name)" id="74cc564f-2006-2abd-c356-7fc55f43dd40" timestamp="2016-05-10T23:15:03.924Z" time="213.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 400" />
+		<testcase name="Has Correct Error" />
+	</testsuite>
+	<testsuite name="Create Diagnostic Server (dupe name)" id="88dfbfab-84d0-ed80-953d-1c6f34730129" timestamp="2016-05-10T23:15:03.924Z" time="212.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 409" />
+		<testcase name="Your test name" />
+	</testsuite>
+	<testsuite name="Create Diagnostic Server" id="9e877e90-dffd-cd4b-a420-e60b0f1e1b20" timestamp="2016-05-10T23:15:03.924Z" time="282.00 ms" tests="2" failures="1">
+		<testcase name="Status code is 200" />
+		<testcase name="Has Correct Error" >
+			<failure><![CDATA[Has Correct Error]]></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="Delete Diagnostic Server (missing ds id)" id="becd6091-c00a-0156-c9f7-255fe35e4627" timestamp="2016-05-10T23:15:03.924Z" time="274.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 400" />
+		<testcase name="Has Correct Error" />
+	</testsuite>
+	<testsuite name="Delete Diagnostic Server (bad ds id)" id="50af833b-3ec2-0913-e9b8-df1dc198f91b" timestamp="2016-05-10T23:15:03.924Z" time="267.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 400" />
+		<testcase name="Has Correct Error" />
+	</testsuite>
+	<testsuite name="Delete Diagnostic Server" id="456fe085-f428-6ea4-4c19-c6584f963433" timestamp="2016-05-10T23:15:03.924Z" time="237.00 ms" tests="2" failures="1">
+		<testcase name="Status code is 200" />
+		<testcase name="Has Correct Error" >
+			<failure><![CDATA[Has Correct Error]]></failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="Delete Diagnostic Server (non-existent ds id)" id="e30db8d7-4b56-2b8f-0b92-fe23a98991e8" timestamp="2016-05-10T23:15:03.924Z" time="225.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 404" />
+		<testcase name="Has Correct Error" />
+	</testsuite>
+	<testsuite name="All Connections" id="ca86d5f7-3958-e266-de9b-e7a6eee69264" timestamp="2016-05-10T23:15:03.925Z" time="305.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 200" />
+		<testcase name="Has Connections" />
+	</testsuite>
+	<testsuite name="Connections For a DS" id="6f7090ea-de3d-edcd-3b10-01562150af7b" timestamp="2016-05-10T23:15:03.925Z" time="210.00 ms" tests="2" failures="0">
+		<testcase name="Status code is 200" />
+		<testcase name="Has Connections" />
+	</testsuite>
+	<testsuite name="V1 Status" id="e7299f60-78e7-865b-1006-183fe3c4c06d" timestamp="2016-05-10T23:15:03.925Z" time="2820.00 ms" tests="0" failures="0">
+	</testsuite>
+	<testsuite name="V1 Status" id="77d9586c-fe39-3fc0-b868-e1b009a7b7ee" timestamp="2016-05-10T23:15:03.925Z" time="1377.00 ms" tests="0" failures="0">
+	</testsuite>
+	<testsuite name="V1 Procedure" id="4184c601-8659-3aff-9f0a-c45c1d96a407" timestamp="2016-05-10T23:15:03.925Z" time="376.00 ms" tests="0" failures="0">
+	</testsuite>
+	<testsuite name="V1 Procedure" id="0a805152-af92-7b15-1fb2-85ffb8bb4c8f" timestamp="2016-05-10T23:15:03.925Z" time="821.00 ms" tests="0" failures="0">
+	</testsuite>
+	<testsuite name="V2 Procedure" id="91706f23-f495-53c2-940a-7f14e034aea1" timestamp="2016-05-10T23:15:03.925Z" time="455.00 ms" tests="0" failures="0">
+	</testsuite>
+	<testsuite name="Catalog" id="2867c909-0af5-9762-3193-ae66f610a17d" timestamp="2016-05-10T23:15:03.925Z" time="233.00 ms" tests="0" failures="0">
+	</testsuite>
+	<testsuite name="Catalog (dsid)" id="a0619d27-c0b5-fce4-ba6f-5d930287471d" timestamp="2016-05-10T23:15:03.925Z" time="251.00 ms" tests="0" failures="0">
+	</testsuite>
+	<testsuite name="Catalog (dsid, unknown me)" id="e2a56465-5969-a741-299d-9dd5abcbe0a1" timestamp="2016-05-10T23:15:03.925Z" time="234.00 ms" tests="0" failures="0">
+	</testsuite>
+	<testsuite name="Catalog (dsid, me)" id="02f78532-8edd-daa0-55cc-948665dc9852" timestamp="2016-05-10T23:15:03.925Z" time="241.00 ms" tests="0" failures="0">
+	</testsuite>
+	<testsuite name="V1 Procedure Range" id="18c84da5-a091-deb1-6e0e-c6bd7366e913" timestamp="2016-05-10T23:15:03.925Z" time="266.00 ms" tests="0" failures="0">
+	</testsuite>
+</testsuites>
